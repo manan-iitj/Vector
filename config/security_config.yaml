@@ -1,0 +1,27 @@
+security:
+  # TurboBlom configuration
+  turboblom:
+    k: 4  # finite field order parameter (2^k nodes)
+    t: 2  # number of compromised nodes tolerated
+    field_size: 256  # bits
+    
+  # Authentication configuration
+  authentication:
+    handshake_enabled: true
+    nonce_size: 16  # bytes
+    mac_algorithm: "HMAC-SHA256"
+    replay_protection: true
+    max_replay_window: 100
+    
+  # Key management
+  key_manager:
+    key_lifetime: 3600  # seconds
+    rekey_threshold: 0.5  # fraction of keys used before rekey
+    secure_cleanup: true
+    
+  # mbedTLS integration
+  crypto:
+    random_source: "hardware_preferred"
+    sha256_enabled: true
+    aes_128_enabled: true
+    constant_time_compare: true

@@ -1,0 +1,38 @@
+simulation:
+  # General
+  seed: 42
+  simulation_time: 100  # seconds
+  timeout_factor: 1.5  # multiplier for timeouts
+  
+  # Experiment control
+  experiment: "topology_comparison"
+  
+  # Topology settings
+  topology: "debruijn"  # "debruijn", "chordal_ring", "random"
+  num_nodes: 50
+  
+  # Security settings
+  enable_security: true
+  enable_authentication: true
+  enable_turboblom: true
+  
+  # HEED clustering
+  heed_enabled: true
+  initial_cluster_head_prob: 0.1
+  
+  # Leader election
+  election_enabled: true
+  election_epoch_duration: 5  # seconds
+  min_candidates: 2
+  
+  # SEARCH/recovery
+  search_enabled: true
+  search_ttl: 10
+  search_timeout: 5  # seconds
+  
+  # Output
+  export_packet_logs: true
+  export_authentication_logs: true
+  export_election_logs: true
+  export_battery_logs: true
+  export_routing_logs: true

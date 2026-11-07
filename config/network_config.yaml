@@ -1,0 +1,32 @@
+network:
+  # Node configuration
+  max_nodes: 100
+  network_dimensions: [1000, 1000]  # meters
+  wireless_range: 200  # meters
+  
+  # Radio configuration
+  packet_size: 512  # bytes
+  data_rate: 54e6  # 54 Mbps (802.11g)
+  
+  # Propagation and error model
+  propagation_delay: 2e-6  # 2 microseconds
+  packet_loss_rate: 0.01  # 1% default
+  shadowing_enabled: true
+  fading_enabled: false
+  
+  # Mobility
+  mobility_model: "random-waypoint"
+  max_speed: 10  # m/s for drones
+  pause_time: 0  # seconds
+  
+  # Node failure
+  failure_probability: 0.0  # per simulation second
+  recovery_probability: 0.1  # per second
+  
+  # Link failure schedule
+  link_failure_interval: 0  # 0 means no scheduled failures
+  link_recovery_interval: 0
+  
+  # Node joining
+  join_rate: 0  # nodes per second
+  join_spacing: 50  # meters minimum separation
